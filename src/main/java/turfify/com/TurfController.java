@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/turfs")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+	    "http://localhost:5173",
+	    "https://turfify-frontend.onrender.com"
+	})
 public class TurfController {
 
     private final TurfService turfService;
